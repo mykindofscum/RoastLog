@@ -1,6 +1,5 @@
 const passport = require('passport');
-const GoogleStrategy = require
-('passport-google-oauth20').Strategy;
+const GoogleStrategy = require('passport-google-oauth20').Strategy;
 const User = require('../models/user');
 
 passport.use(new GoogleStrategy({
@@ -31,13 +30,13 @@ passport.use(new GoogleStrategy({
 ));
 // method used to give Passport the nugget of data to put into
 // the session for this authenticated user
-passport.serializeUser((user, cb) => {
+passport.serializeUser(function(user, cb) {
     cb(null, user.id);
 });
 // method used to give Passport with the user from the db
 // we want assigned to the req.user object
-passport.deserializeUser((id, cb) => {
-    User.findById(id, (err, user) => {
+passport.deserializeUser(function(id, cb) {
+    User.findById(id, function(err, user) {
         cb(err, user);
     });
 });
