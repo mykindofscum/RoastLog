@@ -7,7 +7,7 @@ const userSchema = new Schema({
     email: String,
     googleId: String
 }, {
-    timestamps: true
+    timestamps: Date
 });
 
 const reviewSchema = new Schema({
@@ -17,68 +17,12 @@ const reviewSchema = new Schema({
         type: String,
         enum: ['Drip', 'Espresso', 'French Press', 'Aeropress', 
         'Cowboy', 'Cold Brew', 'Other']
-    }, {
-    timestamps: true
-    }
-});
+    }, 
+    timestamps: Date
+});     
 
-const roastSchema = new Schema({
-    title: {
-        originName: String,
-        required: true,
-    },
-    date: {
-        required: true,
-        default: function () {
-            return new Date().getFullYear();
-        },
-    temp: {
-        type: String,
-        enum: ['high', 'med', 'low', 'other']
-    },
-    fanSpeed: {
-        type: String,
-        enum: ['high', 'med', 'low', 'other']
-    },
-    roastTime: {
-        type: Number,
-        required: true
-    },
-    yellowingTime: {
-        type: Number,
-        required: true
-    },
-    browningTime: {
-        type: Number,
-        required: true
-    },
-    firstCrkStart: {
-        type: Number,
-        required: true
-    },
-    firstCrkEnd: {
-        type: Number,
-        required: true
-    },
-    endTime: {
-        type: Number,
-        required: true
-    },
-    airRoaster: {
-        type: String,
-        enum: ['Popcorn popper', 'Fresh Roast SR500', 'Other']
-    },
-    drumRoaster: {
-        type: String,
-        enum: ['Behmor 1600PLUS', 'Gene Cafe Roaster', 'Aillio Bullet R1', 'Hot Top Basic', 'Other']
-    },
-    stoveRoaster: {
-        type: String,
-        enum: ['Wok', 'Pan', 'Other']
-    }, {
-        timestamps: true  
-    
-});
+
 
 
 module.exports = mongoose.model('User', userSchema);
+module.exports = mongoose.model('Review', reviewSchema);
