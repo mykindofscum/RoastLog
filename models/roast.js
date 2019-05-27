@@ -3,14 +3,11 @@ const Schema = mongoose.Schema;
 
 
 const roastSchema = new Schema({
-    title: {
-        originName: String,
-        required: true,
+    originName: {
+        type: String,
     },
-    date: {
-        default: function () {
-            return new Date().getFullYear();
-        }, required: true,
+    dateRoast: {
+        type: Date
     },
     temp: {
         type: String,
@@ -21,28 +18,19 @@ const roastSchema = new Schema({
         enum: ['high', 'med', 'low', 'other']
     },
     roastTime: {
-        type: Number,
-        required: true
+        type: Number
     },
     yellowingTime: {
-        type: Number,
-        required: true
+        type: Number
     },
     browningTime: {
-        type: Number,
-        required: true
+        type: Number
     },
     firstCrkStart: {
-        type: Number,
-        required: true
+        type: Number
     },
     firstCrkEnd: {
-        type: Number,
-        required: true
-    },
-    endTime: {
-        type: Number,
-        required: true
+        type: Number
     },
     airRoaster: {
         type: String,

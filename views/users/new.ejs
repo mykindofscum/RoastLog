@@ -1,0 +1,55 @@
+<%- include('../partials/header') %>
+
+
+<form id="new-form" action="/users" method="POST">
+    <label>Name/Origin:</label>
+        <input type="text" name="originName">
+    <label>Date of Roast:</label>
+        <input name="dateRoast" type="datetime-local">
+    <label>Temperature:</label>
+    <select name="temp">
+        <option value="high">High</option>
+        <option value="med">Med</option>
+        <option value="low">Low</option>
+        <option value="other">Other</option>
+    </select>
+    <label>Fan Speed:</label>
+        <select name="fanSpeed">
+            <option value="high">High</option>
+            <option value="med">Med</option>
+            <option value="low">Low</option>
+            <option value="other">Other</option>
+        </select>
+    <label>Yellowing Time:</label>
+        <input name="yellowingTime" type="number">
+    <label>Browning Time:</label>
+        <input name="browningTime" type="number">
+    <label>First Crack Start Time:</label>
+        <input name="firstcrkStart" type="number">
+    <label>First Crack End Time:</label>
+        <input name="firstcrkEnd" type="number">
+    <label>Air Roaster:</label>
+        <select name="airRoaster">
+            <option value="Popcorn Popper">Electric Popcorn Popper</option>
+            <option value="Fresh Roast SR300">Fresh Roast SR300</option>
+            <option value="other">Other</option>
+        </select>
+    <label>Drum Roaster:</label>
+        <select name="drumRoaster">
+            <option value="Behmore">Behmore 1600PLUS</option>
+            <option value="Gene">Gene Cafe Roaster</option>
+            <option value="Aillio">Aillio Bullet R1</option>
+            <option value="Hot">Hot Top Basic</option>
+            <option value="other">Other</option>
+
+        </select>
+        enum: ['Behmor 1600PLUS', 'Gene Cafe Roaster', 
+        'Aillio Bullet R1', 'Hot Top Basic', 'Other']
+    <label>Stove Roaster:</label>
+    
+    
+    <input type="checkbox" name="nowShowing" checked>
+    <input type="submit" value="Add Movie">
+  </form>
+
+  <%- include('../partials/footer') %>
