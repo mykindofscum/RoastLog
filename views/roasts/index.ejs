@@ -1,18 +1,17 @@
 <%- include('../partials/header') %>
 
-
 <form id="new-form" action="/users" method="POST">
     <label>Name/Origin:</label>
         <input type="text" name="originName">
     <label>Date of Roast:</label>
         <input name="dateRoast" type="datetime-local">
     <label>Temperature:</label>
-    <select name="temp">
-        <option value="high">High</option>
-        <option value="med">Med</option>
-        <option value="low">Low</option>
-        <option value="other">Other</option>
-    </select>
+        <select name="temp">
+            <option value="high">High</option>
+            <option value="med">Med</option>
+            <option value="low">Low</option>
+            <option value="other">Other</option>
+        </select>
     <label>Fan Speed:</label>
         <select name="fanSpeed">
             <option value="high">High</option>
@@ -41,15 +40,14 @@
             <option value="Aillio">Aillio Bullet R1</option>
             <option value="Hot">Hot Top Basic</option>
             <option value="other">Other</option>
-
         </select>
-        enum: ['Behmor 1600PLUS', 'Gene Cafe Roaster', 
-        'Aillio Bullet R1', 'Hot Top Basic', 'Other']
     <label>Stove Roaster:</label>
-    
-    
-    <input type="checkbox" name="nowShowing" checked>
-    <input type="submit" value="Add Movie">
+        <select name="stoveRoaster">
+            <option value="wok">Wok</option>
+            <option value="pan">Pan</option>
+            <option value="other">Other</option>
+        </select>
+    <input type="submit" value="Add Roast Log">
   </form>
 
   <%- include('../partials/footer') %>

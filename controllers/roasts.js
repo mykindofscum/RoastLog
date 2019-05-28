@@ -3,9 +3,10 @@ const Roast = require('../models/roast');
 
 module.exports = {
     index,
-    show,
-
-}
+    // show,
+    new: newRoast,
+    create
+};
 
 function index(req, res, next) {
     Roast.find({}, (err, foundRoasts) => {
@@ -18,7 +19,14 @@ function index(req, res, next) {
     });
 }
 
-function show(req, res) {
-    Roast.findById(req.params.id)
-    
+function newRoast(req, res) {
+    res.render('users', { title: 'Add Roast Log'});
+}
+
+function create(req, res) {
+    var roast = new Roast (req.body);
+    roast.save(function(err) {
+        if (err) return res.redirect('/roasts/new');
+        res.redirect(`/roasts/${roast._id}`);
+    });
 }
