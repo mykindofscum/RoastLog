@@ -3,11 +3,16 @@ const Schema = mongoose.Schema;
 
 
 const roastSchema = new Schema({
-    originName: {
+    roastName: {
         type: String,
     },
     dateRoast: {
         type: Date
+    },
+    roastType: {
+        type: String,
+        enum: ['City Roast', 'City+ Roast', 'Full City Roast', 'Full City+ roast', 
+        'Vienna Roast', 'Full French Roast', 'Fully Carbonized']
     },
     temp: {
         type: String,
@@ -44,7 +49,7 @@ const roastSchema = new Schema({
     stoveRoaster: {
         type: String,
         enum: ['Wok', 'Pan', 'Other']
-        } 
+    },
     }, {
         timestamps: Date 
     });

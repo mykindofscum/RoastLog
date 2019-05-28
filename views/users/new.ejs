@@ -1,0 +1,23 @@
+<%- include('../partials/header') %>
+<h1>All Roast Logs</h1>
+
+<table id="list">
+  <thead>
+    <tr>
+      <th>Roast Name</th>
+      <th>Roast Date</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% roasts.forEach(function(r) { %>
+      <tr>
+        <td><%= r.originName %></td>
+        <td><%= r.roastDate %></td>
+        <td><a href="/roasts/<%= r._id %>">DETAILS</a></td>
+      </tr>
+      <% }); %>
+    </tbody>
+  </table>
+  
+<%- include('../partials/footer') %>

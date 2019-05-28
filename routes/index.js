@@ -28,6 +28,7 @@ router.get('/logout', function(req, res) {
   res.redirect('/');
 });
 
+
 // Helper function for protecting pages
 function isLoggedIn(req, res, next) {
   if ( req.isAuthenticated() ) return next();
