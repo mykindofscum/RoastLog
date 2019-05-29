@@ -50,11 +50,5 @@ function create(req, res) {
         res.redirect(`/roasts`);
     });
 }
-// Roast.create(req.body, function(err, createdRoast) {
-//     if (err) {
-//         console.log(err)
-//         return res.redirect('/roasts/new');
-//     }
-//     res.redirect(`/roasts`);
-// });
+
 

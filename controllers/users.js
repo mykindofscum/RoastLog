@@ -1,6 +1,7 @@
 const User = require('../models/user');
 const Roast = require('../models/roast');
 
+
 module.exports = {
     index,
     privateView,
