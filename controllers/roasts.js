@@ -19,11 +19,13 @@ function index(req, res, next) {
 }
 
 function show(req, res) {
-    Roast.findById(req.params.id, function(err, flight) {
+    Roast.findById(req.params.id, function(err, roast) {
         console.log('req.params.id');
         if (err) return res.redirect('/roasts/show');
         res.render('roasts/show', {
-            title: 'Roast Detail', roast });
+            title: 'Roast Detail', 
+            roast 
+        });
     });
 }
       

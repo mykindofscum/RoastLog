@@ -2,29 +2,29 @@
 
 <section id="roast-details">
     <div>Title:</div>
-    <div><%- roast.roastName %></div>
+    <div><%= roast.roastName %></div>
     <div>Roast Date:</div>
-    <div><%- roast.roastDate %></div>
-    <div>Total Roast Time:</div>
-    <div><%- roast.roastTime %></div>
+    <div><%= roast.roastDate %></div>
+    <div>Total Roast Time(minutes):</div>
+    <div><%= roast.roastTime %></div>
     <div>Roast Type:</div>
-    <div><%- roast.roastType %></div>
+    <div><%= roast.roastType %></div>
     <div>Temperature:</div>
-    <div><%- roast.roastTemp %></div>
+    <div><%= roast.temp %></div>
     <div>Fan Speed:</div>
-    <div><%- roast.fanSpeed %></div>
-    <div>Yellowing Time:</div>
-    <div><%- roast.yellowTime %></div>
-    <div>Browning Time:</div>
-    <div><%- roast.brownTime %></div>
+    <div><%= roast.fanSpeed %></div>
+    <div>Yellowing Time(minutes):</div>
+    <div><%= roast.yellowTime%></div>
+    <div>Browning Time(minutes):</div>
+    <div><%= roast.brownTime %></div>
     <div>First crack start time(minutes):</div>
-    <div><%- roast.firstCrkStart %></div>
+    <div><%= roast.firstCrkStart %></div>
     <div>First crack end time(minutes):</div>
-    <div><%- roast.firstCrkEnd %></div>
+    <div><%= roast.firstCrkEnd %></div>
     <div>Roasting Method:</div>
-    <div><%- roast.airRoaster %></div>
-    <div><%- roast.drumRoaster %></div>
-    <div><%- roast.stoveRoaster %></div>
+    <div><%= roast.airRoaster %></div>
+    <div><%= roast.drumRoaster %></div>
+    <div><%= roast.stoveRoaster %></div>
     <div>Now Sharing: </div>
     <div><%- roast.nowSharing ? 'Yes, msg me for a sample' : 'Nope, all out' %></div>
 </section>  
