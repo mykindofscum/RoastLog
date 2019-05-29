@@ -4,9 +4,9 @@ const Schema = mongoose.Schema;
 
 const roastSchema = new Schema({
     roastName: {
-        type: String,
+        type: String
     },
-    dateRoast: {
+    roastDate: {
         type: Date
     },
     roastTime: {

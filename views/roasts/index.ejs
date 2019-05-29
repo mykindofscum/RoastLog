@@ -1,6 +1,5 @@
 <%- include('../partials/header') %>
 
-
 <h1>All Roast Logs</h1>
 
 <table id="list">
@@ -11,12 +10,11 @@
             <th></th>
         </tr>
     </thead>
-    
     <tbody>
     <% if (roasts.length === 0) { %>
         <% roasts.forEach(function(r) { %>
         <tr>
-            <td><%= r.originName %></td>
+            <td><%= r.roastName %></td>
             <td><%= r.roastDate %></td>
             <td><a href="/roasts/<%= r._id %>">DETAILS</a></td>
         </tr>

@@ -1,9 +1,6 @@
 body {
     padding: 20px;
-    margin: 20px;
-    background-image: url("https://cdn.pixabay.com/photo/2015/12/08/00/51/coffee-beans-1082116_1280.jpg");
-    }
-
-h1, p, form, th, tr, td {
-    color: wheat;
-}
+    margin: 30px;
+    background-image: url("../images/coffee-beans-1082116_1280.jpg");
+    color: whitesmoke;
+}   

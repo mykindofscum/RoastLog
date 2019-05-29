@@ -1,8 +1,10 @@
 const User = require('../models/user');
+const Roast = require('../models/roast');
 
 module.exports = {
     index,
-    privateView
+    privateView,
+    create
 };
 
 function index(req, res, next) {
@@ -20,4 +22,12 @@ function privateView(req, res) {
     res.send("You found something private");
 }
 
+function create(req, res) {
+    Roast.findById(req.params.id, function(err, roast) {
+        roast.reviews.push(req.body);
+        roast.save(function(err) {
+            res.redirect(`/roasts/${roast_id}`);
+        });
+    });
+}
 
