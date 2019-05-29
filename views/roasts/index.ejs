@@ -1,70 +1,30 @@
 <%- include('../partials/header') %>
 
-<form id="new-form" action="/" method="POST">
-    <h3>Add Roast Log</h3>
-    <label>Name/Origin:</label>
-        <input type="text" name="roastName">
-    <label>Date of Roast:</label>
-        <input name="dateRoast" type="datetime-local">
-    <label>Roast Type:</label>
-        <select name="roastType">
-            <option value="city">City Roast</option>
-            <option value="city+">City+ Roast</option>
-            <option value="fullcity">Full City Roast</option>
-            <option value="fullcity+">Full City+ Roast</option>
-            <option value="vienna">Vienna Roast</option>
-            <option value="french">Full French Roast</option>
-            <option value="carbon">Full Carbonized</option>
-        </select>
-    <label>Temperature:</label>
-        <select name="temp">
-            <option value="high">High</option>
-            <option value="med">Med</option>
-            <option value="low">Low</option>
-            <option value="other">Other</option>
-        </select>
-    <label>Fan Speed:</label>
-        <select name="fanSpeed">
-            <option value="high">High</option>
-            <option value="med">Med</option>
-            <option value="low">Low</option>
-            <option value="other">Other</option>
-        </select>
-    <label>Yellowing Time(minutes):</label>
-        <input name="yellowingTime" type="number" min="1" max="60">
-    <label>Browning Time(minutes):</label>
-        <input name="browningTime" type="number" min="1" max="60">
-    <label>First Crack Start Time(minutes):</label>
-        <input name="firstcrkStart" type="number" min="1" max="60">
-    <label>First Crack End Time(minutes):</label>
-        <input name="firstcrkEnd" type="number" min="1" max="60">
-    <h3>Roasting Method:</h3>
-    <label>Air Roaster:</label>
-        <select name="airRoaster">
-            <option value="Popcorn Popper">Electric Popcorn Popper</option>
-            <option value="Fresh Roast SR300">Fresh Roast SR300</option>
-            <option value="other">Other</option>
-            <option selected value="na">--</option>
-        </select>
-    <label>Drum Roaster:</label>
-        <select name="drumRoaster">
-            <option value="Behmore">Behmore 1600PLUS</option>
-            <option value="Gene">Gene Cafe Roaster</option>
-            <option value="Aillio">Aillio Bullet R1</option>
-            <option value="Hot">Hot Top Basic</option>
-            <option value="other">Other</option>
-            <option selected value="na">--</option>
-        </select>
-    <label>Stove Roaster:</label>
-        <select name="stoveRoaster">
-            <option value="wok">Wok</option>
-            <option value="pan">Pan</option>
-            <option value="other">Other</option>
-            <option selected value="na">--</option>
-        </select>
-        <label>Now Sharing:</label>
-        <input type="checkbox" name="nowSharing" checked>
-    <input type="submit" value="Add Roast Log">
-  </form>
+
+<h1>All Roast Logs</h1>
+
+<table id="list">
+    <thead>
+        <tr>
+            <th>Roast Name</th>
+            <th>Roast Date</th>
+            <th></th>
+        </tr>
+    </thead>
+    
+    <tbody>
+    <% if (roasts.length === 0) { %>
+        <% roasts.forEach(function(r) { %>
+        <tr>
+            <td><%= r.originName %></td>
+            <td><%= r.roastDate %></td>
+            <td><a href="/roasts/<%= r._id %>">DETAILS</a></td>
+        </tr>
+        <% }); %>
+    <% } else { %>
+        <tr><td>Please add some roasts</td></tr>
+    <% } %>
+    </tbody>
+</table>
 
   <%- include('../partials/footer') %>

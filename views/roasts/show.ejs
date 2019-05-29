@@ -1,1 +1,53 @@
-<h1>Test</h1>
+<%- include('../partials/header') &>
+
+<section id="roast-details">
+    <div>Title:</div>
+    <div><%- roast.roastName %></div>
+    <div>Roast Date:</div>
+    <div><%- roast.roastDate %></div>
+    <div>Total Roast Time:</div>
+    <div><%- roast.roastTime %></div>
+    <div>Roast Type:</div>
+    <div><%- roast.roastType %></div>
+    <div>Temperature:</div>
+    <div><%- roast.roastTemp %></div>
+    <div>Fan Speed:</div>
+    <div><%- roast.fanSpeed %></div>
+    <div>Yellowing Time:</div>
+    <div><%- roast.yellowTime %></div>
+    <div>Browning Time:</div>
+    <div><%- roast.brownTime %></div>
+    <div>First crack start time(minutes):</div>
+    <div><%- roast.firstCrkStart %></div>
+    <div>First crack end time(minutes):</div>
+    <div><%- roast.firstCrkEnd %></div>
+    <div>Roasting Method:</div>
+    <div><%- roast.airRoaster %></div>
+    <div><%- roast.drumRoaster %></div>
+    <div><%- roast.stoveRoaster %></div>
+    <div>Now Sharing: </div>
+    <div><%- roast.nowSharing ? 'Yes, msg me for a sample' : 'Nope, all out' %></div>
+</section>  
+
+<br><br><h2>Review a roast</h2>
+<form id="add-review-form" method="POST"
+    action="/roasts/<%= roast._id %>/reviews">
+    <label>Review:</label>
+    <textarea name="content"></textarea>
+    <label>Rating:</label>
+    <select name="rating">
+        <option value="1"></option>
+        <option value="2"></option>
+        <option value="3"></option>
+        <option value="4"></option>
+        <option value="5"></option>
+        <option value="6"></option>
+        <option value="7"></option>
+        <option value="8"></option>
+        <option value="9"></option>
+        <option value="10"></option>
+    </select>
+    <input type="submit" value="Add Review">
+</form>
+
+<%- include('../partials/footer') %>

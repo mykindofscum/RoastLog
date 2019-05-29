@@ -9,10 +9,13 @@ const roastSchema = new Schema({
     dateRoast: {
         type: Date
     },
+    roastTime: {
+        type: Number
+    },
     roastType: {
         type: String,
-        enum: ['City Roast', 'City+ Roast', 'Full City Roast', 'Full City+ roast', 
-        'Vienna Roast', 'Full French Roast', 'Fully Carbonized']
+        enum: ['City', 'City+', 'Full City', 'Full City+', 
+        'Vienna', 'Full French', 'Fully Carbonized']
     },
     temp: {
         type: String,
@@ -22,13 +25,10 @@ const roastSchema = new Schema({
         type: String,
         enum: ['high', 'med', 'low', 'other']
     },
-    roastTime: {
+    yellowTime: {
         type: Number
     },
-    yellowingTime: {
-        type: Number
-    },
-    browningTime: {
+    brownTime: {
         type: Number
     },
     firstCrkStart: {
@@ -39,16 +39,16 @@ const roastSchema = new Schema({
     },
     airRoaster: {
         type: String,
-        enum: ['Popcorn popper', 'Fresh Roast SR500', 'Other']
+        enum: ['Electric Popcorn Popper', 'Fresh Roast SR500', 'Other', 'none']
     },
     drumRoaster: {
         type: String,
         enum: ['Behmor 1600PLUS', 'Gene Cafe Roaster', 
-        'Aillio Bullet R1', 'Hot Top Basic', 'Other']
+        'Aillio Bullet R1', 'Hot Top Basic', 'Other', 'none']
     },
     stoveRoaster: {
         type: String,
-        enum: ['Wok', 'Pan', 'Other']
+        enum: ['Wok', 'Pan', 'Other', 'none']
     },
     }, {
         timestamps: Date 

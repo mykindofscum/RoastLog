@@ -1,6 +1,5 @@
 const Roast = require('../models/roast');
 
-
 module.exports = {
     index,
     show,
@@ -12,8 +11,8 @@ function index(req, res, next) {
     Roast.find({}, (err, foundRoasts) => {
         res.render('roasts/index',
             {
-            title: 'Roast Logs',
-            roasts: foundRoasts
+                title: 'Roast Logs',
+                roasts: foundRoasts
             }
         );
     });
@@ -28,18 +27,32 @@ function show(req, res) {
 };
       
 function newRoast(req, res) {
-    res.render('users', { title: 'Add Roast Log'});
+    res.render('roasts/new', { title: 'Add Roast Log'});
 }
 
 function create(req, res) {
     req.body.nowSharing = !!req.body.nowSharing;
-  for (let key in req.body) {
-    if (req.body[key] === '') delete req.body[key];
-  }
-    var roast = new Roast (req.body);
-    console.log(req.body)
+    
+    for (let key in req.body) {
+        if (req.body[key] === '') delete req.body[key];
+    }
+    
+
+    // Roast.create(req.body, function(err, createdRoast) {
+    //     if (err) {
+    //         console.log(err)
+    //         return res.redirect('/roasts/new');
+    //     }
+    //     res.redirect(`/roasts`);
+    // });
+
+    var roast = new Roast(req.body);
+    console.log('///////////////////////////////')
+    console.log(roast);
+    console.log('///////////////////////////////')
     roast.save(function(err) {
+        console.log(roast.save);
         if (err) return res.redirect('/roasts/new');
-        res.redirect(`/roasts/${roast._id}`);
+        res.redirect(`/roasts`);
     });
 }
