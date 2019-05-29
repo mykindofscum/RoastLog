@@ -5,7 +5,7 @@
   <label>Name/Origin:</label>
       <input type="text" name="roastName">
   <label>Date of Roast:</label>
-      <input name="dateRoast" type="datetime-local">
+      <input name="roastDate" type="datetime-local">
   <label>Total Roast Time:</label>
       <input name="roastTime" type="number">
   <label>Roast Type:</label>
@@ -65,7 +65,9 @@
           <option selected value="none">--</option>
       </select>
       <label>Now Sharing:</label>
+      <select name="nowSharing">
       <input type="checkbox" name="nowSharing" checked>
+      </select>
   <input type="submit" value="Add Roast Log">
 </form>
   

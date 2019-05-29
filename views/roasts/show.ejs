@@ -1,4 +1,4 @@
-<%- include('../partials/header') &>
+<%- include('../partials/header') %>
 
 <section id="roast-details">
     <div>Title:</div>
@@ -39,6 +39,17 @@
     <textarea name="content"></textarea>
     <label>Smell:</label>
     <textarea name="content"></textarea>
+    <label>Brew Method:</label>
+    <select name="brewType">
+        <option value="Drip">Drip</option>
+        <option value="Espresso">Espresso</option>
+        <option value="French Press">French Press</option>
+        <option value="Aeropress">Aeropress</option>
+        <option value="Chemex">Chemex</option>
+        <option value="Cowboy">Cowboy</option>
+        <option value="Cold Brew">Cold Brew</option>
+        <option value="Other">Other</option>
+    </select>
     <label>Rating:</label>
     <select name="rating">
         <option value="1"></option>

@@ -38,22 +38,21 @@ function create(req, res) {
         if (req.body[key] === '') delete req.body[key];
     }
     
-    // Roast.create(req.body, function(err, createdRoast) {
-    //     if (err) {
-    //         console.log(err)
-    //         return res.redirect('/roasts/new');
-    //     }
-    //     res.redirect(`/roasts`);
-    // });
-
     var roast = new Roast(req.body);
     console.log('///////////////////////////////')
     console.log(roast);
     console.log('///////////////////////////////')
-        roast.save((err) => {
-            if (err) return res.redirect('/roasts/new');
-            console.log('roast')
-            res.redirect(`/roasts`);
+    roast.save((err) => {
+        if (err) return res.redirect('/roasts/new');
+        console.log('roast.save')
+        res.redirect(`/roasts`);
     });
 }
+// Roast.create(req.body, function(err, createdRoast) {
+//     if (err) {
+//         console.log(err)
+//         return res.redirect('/roasts/new');
+//     }
+//     res.redirect(`/roasts`);
+// });
 

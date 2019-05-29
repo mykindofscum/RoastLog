@@ -50,6 +50,7 @@ const roastSchema = new Schema({
         type: String,
         enum: ['Wok', 'Pan', 'Other', 'none']
     },
+    nowSharing: { type: Boolean, default: false },
     }, {
         timestamps: Date 
     });

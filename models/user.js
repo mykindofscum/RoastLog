@@ -16,7 +16,7 @@ const reviewSchema = new Schema({
     brewType: {
         type: String,
         enum: ['Drip', 'Espresso', 'French Press', 'Aeropress', 
-        'Cowboy', 'Cold Brew', 'Other']
+        'Cowboy', 'Cold Brew', 'Chemex', 'Other']
     }, 
     timestamps: Date
 });     
