@@ -1,0 +1,73 @@
+<%- include('../partials/header') %>
+    
+    <h1>Edit Roast Log</h1>
+        <form action="/roasts/<%= roast.id %>?_method=PUT" method="POST" authocomplete="off">
+            <label>Name/Origin:</label>
+                <input type="text" name="roastName" value="<%= roast.roastName %>">
+            <label>Date of Roast:</label>
+                <input name="roastDate" type="datetime-local" value="<%= roast.roastDate %>">
+            <label>Total Roast Time:</label>
+                <input name="roastTime" type="number" value="<%= roast.roastTime %>">
+            <label>Roast Type:</label>
+                <select name="roastType" value="<% roast.roastType %>">
+                    <option value="City">City</option>
+                    <option value="City+">City+</option>
+                    <option value="Full City">Full City</option>
+                    <option value="Full City+">Full City+</option>
+                    <option value="Vienna Roast">Vienna Roast</option>
+                    <option value="Full French">Full French</option>
+                    <option value="Full Carbonized">Full Carbonized</option>
+                </select>
+            <label>Temperature:</label>
+                <select name="temp" value="<% roast.temp %>">
+                    <option value="high">high</option>
+                    <option value="med">med</option>
+                    <option value="low">low</option>
+                    <option value="other">other</option>
+                </select>
+            <label>Fan Speed:</label>
+                <select name="fanSpeed" value="<% roast.fanSpeed %>">
+                    <option value="high">high</option>
+                    <option value="med">med</option>
+                    <option value="low">low</option>
+                    <option value="other">other</option>
+                </select>
+            <label>Yellowing Time(minutes):</label>
+                <input name="yellowTime" type="number" min="1" max="60" value="<% roast.yellowTime %>">
+            <label>Browning Time(minutes):</label>
+                <input name="brownTime" type="number" min="1" max="60" value="<% roast.brownTime %>">
+            <label>First Crack Start Time(minutes):</label>
+                <input name="firstCrkStart" type="number" min="1" max="60" value="<% roast.firstCrkStart %>">
+            <label>First Crack End Time(minutes):</label>
+                <input name="firstCrkEnd" type="number" min="1" max="60" value="<% roast.firstCrkEnd %>">
+        <h3>Roasting Method:</h3>
+            <label>Air Roaster:</label>
+                <select name="airRoaster" value="<% roast.airRoaster %>">
+                    <option value="Electric Popcorn Popper">Electric Popcorn Popper</option>
+                    <option value="Fresh Roast SR300">Fresh Roast SR500</option>
+                    <option value="Other">Other</option>
+                    <option selected value="none">--</option>
+                </select>
+            <label>Drum Roaster:</label>
+                <select name="drumRoaster" value="<% roast.drumRoaster %>">
+                    <option value="Behmore 1600PLUS">Behmore 1600PLUS</option>
+                    <option value="Gene Cafe Roaster">Gene Cafe Roaster</option>
+                    <option value="Aillio Bullet R1">Aillio Bullet R1</option>
+                    <option value="Hot Top Basic">Hot Top Basic</option>
+                    <option value="Other">Other</option>
+                    <option selected value="none">--</option>
+                </select>
+            <label>Stove Roaster:</label>
+                <select name="stoveRoaster" value="<% roast.stoveRoaster %>">
+                    <option value="Wok">Wok</option>
+                    <option value="Pan">Pan</option>
+                    <option value="Other">Other</option>
+                    <option selected value="none">--</option>
+                </select>
+            <label>Now Sharing:</label>
+                <input type="checkbox" value="<% roast.nowSharing %>" name="nowSharing" checked>
+            
+                <input type="submit" value="Add Roast Log">
+        </form>
+
+<%- include('../partials/footer') %>
