@@ -4,7 +4,11 @@ module.exports = {
     index,
     show,
     new: newRoast,
-    create
+    create,
+    delRoast,
+    // edit,
+    // update
+
 };
 
 function index(req, res, next) {
@@ -35,20 +39,39 @@ function newRoast(req, res) {
 
 function create(req, res) {
     req.body.nowSharing = !!req.body.nowSharing;
-    
     for (let key in req.body) {
         if (req.body[key] === '') delete req.body[key];
     }
-    
     var roast = new Roast(req.body);
-    console.log('///////////////////////////////')
-    console.log(roast);
-    console.log('///////////////////////////////')
     roast.save((err) => {
         if (err) return res.redirect('/roasts/new');
         console.log('roast.save')
         res.redirect(`/roasts`);
     });
 }
+
+function delRoast(req, res, next) {
+    Roast.findOne({'roasts._id': req.params.id}, (err, student) => {
+        roasts.id(req.params.id).remove();
+        roast.save((err) => {
+            res.redirect('/roasts');
+        });
+    });
+}
+
+// function edit(req, res) {
+//     res.render('roasts/edit', {
+//         roast: Roast.getOne(req.params.id),
+//         idx: req.params.id
+//     });
+// }
+
+// function update(req, res) {
+//     req.body.done = req.body.done === 'on';
+//     Roast.update(req.params.id, req.body);
+//     res.redirext('/roasts');
+// }
+
+
 
 

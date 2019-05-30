@@ -1,8 +1,24 @@
-const mongoose = require('mongoose');
-const Schema = mongoose.Schema;
+var mongoose = require('mongoose');
+var Schema = mongoose.Schema;
 
+var reviewSchema = new Schema({
+    content: String,
+    rating: {
+        type: Number, 
+        min: 1, 
+        max: 10, 
+        default: 10
+    },
+    brewType: {
+        type: String,
+        enum: ['Drip', 'Espresso', 'French Press', 'Aeropress', 
+        'Cowboy', 'Cold Brew', 'Other']
+    }
+}, {
+    timestamps: true
+});
 
-const roastSchema = new Schema({
+var roastSchema = new Schema({
     roastName: {
         type: String
     },
@@ -51,8 +67,10 @@ const roastSchema = new Schema({
         enum: ['Wok', 'Pan', 'Other', 'none']
     },
     nowSharing: { type: Boolean, default: false },
+    reviews: [reviewSchema]
     }, {
-        timestamps: Date 
+        timestamps: Date
     });
 
     module.exports = mongoose.model('Roast', roastSchema);
+    // module.exports = mongoose.model('Review', reviewSchema);

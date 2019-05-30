@@ -16,7 +16,10 @@
         <tr>
             <td><%= r.roastName %></td>
             <td><%= r.roastDate %></td>
-            <td><a href="/roasts/<%= r._id %>">DETAILS</a></td>
+            <td id="details"><a href="/roasts/<%= r._id %>">DETAILS</a></td>
+            
+            <td><a href="/roasts/<%= r._id %>?_method=DELETE" method="POST" 
+            class="delete-roast">DELETE</a></td>
         </tr>
         <% }); %>
     <% } else { %>

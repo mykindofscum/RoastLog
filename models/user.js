@@ -10,16 +10,16 @@ const userSchema = new Schema({
     timestamps: Date
 });
 
-const reviewSchema = new Schema({
+var reviewSchema = new Schema({
     content: String,
     rating: {type: Number, min: 1, max: 10, default: 10},
     brewType: {
         type: String,
         enum: ['Drip', 'Espresso', 'French Press', 'Aeropress', 
         'Cowboy', 'Cold Brew', 'Other']
-    }, 
-    timestamps: Date
-});     
+    },
+        timestamps: Date
+    });
 
 module.exports = mongoose.model('User', userSchema);
 module.exports = mongoose.model('Review', reviewSchema);

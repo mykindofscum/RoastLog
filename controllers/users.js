@@ -5,8 +5,12 @@ const Roast = require('../models/roast');
 module.exports = {
     index,
     privateView,
-    createReview
+   
 };
+
+// function deleteOne(id) {
+//     todos.splice('roasts._id', 1);
+// }
 
 function index(req, res, next) {
     console.log(req.user);
@@ -23,12 +27,5 @@ function privateView(req, res) {
     res.send("You found something private");
 }
 
-function createReview(req, res) {
-    Roast.findById(req.params.id, function(err, roast) {
-        roast.reviews.push(req.body);
-        roast.save(function(err) {
-            res.redirect(`/roasts/${roast_id}`);
-        });
-    });
-}
+
 

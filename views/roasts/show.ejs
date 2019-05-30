@@ -9,8 +9,8 @@
     <div>Fan Speed: <%= roast.fanSpeed %></div>
     <div>Yellowing Time(minutes): <%= roast.yellowTime%></div>
     <div>Browning Time(minutes): <%= roast.brownTime %></div>
-    <div>First crack start time(minutes): <%= roast.firstCrkStart %></div>
-    <div>First crack end time(minutes): <%= roast.firstCrkEnd %></div>
+    <div>First crack start time(minutes): <%= roast.firstCrkStart %> </div>
+    <div>First crack end time(minutes): <%= roast.firstCrkEnd %> </div>
     <div>Roasting Method: <%= roast.airRoaster %> <%= roast.drumRoaster %> <%= roast.stoveRoaster %></div>
     <div>Now Sharing: </div>
     <div><%- roast.nowSharing ? 'Yes, msg me for a sample' : 'Nope, all out' %></div>
@@ -22,10 +22,10 @@
     <label>Review:</label>
     <label>Touch:</label>
     <textarea name="content"></textarea>
-    <label>Taste:</label>
+    <!-- <label>Taste:</label>
     <textarea name="content"></textarea>
     <label>Smell:</label>
-    <textarea name="content"></textarea>
+    <textarea name="content"></textarea> -->
     <label>Brew Method:</label>
     <select name="brewType">
         <option value="Drip">Drip</option>
@@ -53,7 +53,7 @@
     <input type="submit" value="Add Review">
 </form>
 
-<% if (roast.reviews && roast.reviews.length) { %>
+<% if (roast.reviews.length) { %>
     <table>
         <thead>
             <tr>

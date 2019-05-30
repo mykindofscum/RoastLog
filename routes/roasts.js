@@ -7,6 +7,9 @@ router.get('/', roastsCtrl.index);
 router.get('/new', roastsCtrl.new);
 router.get('/:id', roastsCtrl.show);
 router.post('/', roastsCtrl.create);
+// router.delete('/:id', roastsCtrl.delete);
+// router.get('/:id/edit', roastsCtrl.edit);
+// router.put('/:id', roastsCtrl.update);
 
 // function isLoggedIn(req, res, next) {
 //     if ( req.isAuthenticated() ) return next();
