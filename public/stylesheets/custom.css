@@ -9,3 +9,7 @@ body {
 .delete-roast {
     color: red;
 }
+
+.edit-roast {
+    color: honeydew;
+}
