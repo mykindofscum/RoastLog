@@ -18,8 +18,13 @@
             <td><%= r.roastDate %></td>
             <td id="details"><a href="/roasts/<%= r._id %>">DETAILS</a></td>
             
-            <td><a href="/roasts/<%= r._id %>?_method=DELETE" method="POST" 
-            class="delete-roast">DELETE</a></td>
+            <td>
+                <form action="/roasts/<%= r._id %>?_method=DELETE" method="POST" class="delete-roast">
+                    <input type="submit" value="DELETE">
+                </form>
+            </td>
+            
+            <td><a href="/roasts/<%= r._id %>/edit" class="edit-roast">EDIT</a></td>
         </tr>
         <% }); %>
     <% } else { %>
