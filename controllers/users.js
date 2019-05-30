@@ -8,10 +8,6 @@ module.exports = {
    
 };
 
-// function deleteOne(id) {
-//     todos.splice('roasts._id', 1);
-// }
-
 function index(req, res, next) {
     console.log(req.user);
     User.find({}, function(err, foundUsers) {
