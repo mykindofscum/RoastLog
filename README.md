@@ -13,19 +13,9 @@ Instructions: Click Login to Google to Add roasts or reviews or just look at arc
 *Next Steps:*
 Ice box items: Implement a chatbox widget where users can chat and share their home roast, possibly bring people together once a month.
 
-<<<<<<< HEAD
-Screenshots of App:
-
-![LINK](https://i.imgur.com/dRDpE8F.png)
-
-![LINK](https://i.imgur.com/dRDpE8F.png)
-
-![LINK](https://i.imgur.com/nepQlc7.png)
-=======
 *Screenshots of App:*
 ![Link](https://i.imgur.com/dRDpE8F.png)
 
 ![Link](https://i.imgur.com/dRDpE8F.png)
 
 ![Link](https://i.imgur.com/nepQlc7.png)
->>>>>>> a9f0cef22bb25b8b9a099ce5913346161f1c6641
