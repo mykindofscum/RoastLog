@@ -45,9 +45,9 @@ body {
     padding:10px 10px 10px 10px;
 }
 
-a {
+/* a {
     color: black;
-}
+} */
 
 #roast-details, div {
     padding: 8px;
@@ -61,8 +61,8 @@ h1 {
     padding: 30px;
 }
 
-td {
-    padding: 10px;
+td, th {
+    padding: 20px;
 }
 
 #roast-details {
