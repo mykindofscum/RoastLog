@@ -68,7 +68,6 @@ function update(req, res) {
     
     Roast.findByIdAndUpdate(req.params.id, req.body, (err, roast) => {    
         if (err) {
-            console.log(err);
             res.redirect('/roasts');
         }
         res.redirect('/roasts');

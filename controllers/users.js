@@ -1,6 +1,5 @@
 const User = require('../models/user');
-const Roast = require('../models/roast');
-
+// const Roast = require('../models/roast');
 
 module.exports = {
     index,
@@ -9,7 +8,6 @@ module.exports = {
 };
 
 function index(req, res, next) {
-    console.log(req.user);
     User.find({}, function(err, foundUsers) {
         foundUsers,
         res.render('users/index', {

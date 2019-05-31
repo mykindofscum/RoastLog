@@ -28,13 +28,11 @@ passport.use(new GoogleStrategy({
         });
     }
 ));
-// method used to give Passport the nugget of data to put into
-// the session for this authenticated user
+
 passport.serializeUser(function(user, cb) {
     cb(null, user.id);
 });
-// method used to give Passport with the user from the db
-// we want assigned to the req.user object
+
 passport.deserializeUser(function(id, cb) {
     User.findById(id, function(err, user) {
         cb(err, user);

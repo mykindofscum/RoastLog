@@ -1,5 +1,6 @@
 <%- include('../partials/header') %>
 
+<h1>Details</h1>
 <section id="roast-details">
     <div>Title: <%= roast.roastName %></div>
     <div>Roast Date: <%= roast.roastDate %></div>
@@ -16,16 +17,12 @@
     <div><%- roast.nowSharing ? 'Yes, msg me for a sample' : 'Nope, all out' %></div>
 </section>  
 
-<br><br><h2>Review a roast</h2>
+<br><h1>Review a roast</h1>
 <form id="add-review-form" method="POST"
     action="/roasts/<%= roast._id %>/reviews">
     <label>Review:</label>
-    <label>Touch, Taste, Smell:</label>
+    <label>Touch, Taste, Smell</label>
     <textarea name="content"></textarea>
-    <!-- <label>Taste:</label>
-    <textarea name="content"></textarea>
-    <label>Smell:</label>
-    <textarea name="content"></textarea> -->
     <label>Brew Method:</label>
     <select name="brewType">
         <option value="Drip">Drip</option>

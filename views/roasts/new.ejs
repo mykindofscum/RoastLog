@@ -1,13 +1,13 @@
 <%- include('../partials/header') %>
 
-<h3>Add Roast Log</h3>
+<h1>Add Roast Log</h1>
 <form id="new-form" action="/roasts" method="POST">
   <label>Name/Origin:</label>
-      <input type="text" name="roastName">
+      <input type="text" name="roastName" required>
   <label>Date of Roast:</label>
-      <input name="roastDate" type="datetime-local">
+      <input name="roastDate" type="datetime-local" required>
   <label>Total Roast Time:</label>
-      <input name="roastTime" type="number">
+      <input name="roastTime" type="number" required>
   <label>Roast Type:</label>
       <select name="roastType">
           <option value="City">City</option>
@@ -64,12 +64,10 @@
           <option value="Other">Other</option>
           <option selected value="none">--</option>
       </select>
-      <label>Now Sharing:</label>
-      <select name="nowSharing">
-      <input type="checkbox" name="nowSharing" checked>
-      </select>
-
-  <input type="submit" value="Add Roast Log">
+        <label>Now Sharing:</label>
+            <input type="checkbox" name="nowSharing" checked>
+    
+    <input type="submit" value="Add Roast Log">
 </form>
   
 <%- include('../partials/footer') %>

@@ -1,7 +1,7 @@
-var mongoose = require('mongoose');
-var Schema = mongoose.Schema;
+const mongoose = require('mongoose');
+const Schema = mongoose.Schema;
 
-var reviewSchema = new Schema({
+const reviewSchema = new Schema({
     content: String,
     rating: {
         type: Number, 
@@ -18,7 +18,7 @@ var reviewSchema = new Schema({
     timestamps: true
 });
 
-var roastSchema = new Schema({
+const roastSchema = new Schema({
     roastName: {
         type: String
     },
@@ -73,4 +73,3 @@ var roastSchema = new Schema({
     });
 
     module.exports = mongoose.model('Roast', roastSchema);
-    // module.exports = mongoose.model('Review', reviewSchema);

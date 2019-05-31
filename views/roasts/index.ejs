@@ -1,7 +1,6 @@
 <%- include('../partials/header') %>
 
 <h1>All Roast Logs</h1>
-
 <table id="list">
     <thead>
         <tr>
@@ -16,10 +15,10 @@
         <tr>
             <td><%= r.roastName %></td>
             <td><%= r.roastDate %></td>
-            <td id="details"><a href="/roasts/<%= r._id %>">DETAILS</a></td>
+            <td class="details"><a href="/roasts/<%= r._id %>">DETAILS</a></td>
             
             <td>
-                <form action="/roasts/<%= r._id %>?_method=DELETE" method="POST" class="delete-roast">
+                <form action="/roasts/<%= r._id %>?_method=DELETE" method="POST" class="delete">
                     <input type="submit" value="DELETE">
                 </form>
             </td>
@@ -33,4 +32,4 @@
     </tbody>
 </table>
 
-  <%- include('../partials/footer') %>
+<%- include('../partials/footer') %>
