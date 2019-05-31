@@ -15,15 +15,13 @@
         <tr>
             <td><%= r.roastName %></td>
             <td><%= r.roastDate %></td>
-            <td class="details"><a href="/roasts/<%= r._id %>">DETAILS</a></td>
-            
+            <td><a href="/roasts/<%= r._id %>" class="details-button">DETAILS</a></td>
             <td>
-                <form action="/roasts/<%= r._id %>?_method=DELETE" method="POST" class="delete">
-                    <input type="submit" value="DELETE">
+                <form action="/roasts/<%= r._id %>?_method=DELETE" method="POST">
+                    <input class ="delete-button" type="submit" value="DELETE">
                 </form>
             </td>
-            
-            <td><a href="/roasts/<%= r._id %>/edit" class="edit-roast">EDIT</a></td>
+            <td ><a href="/roasts/<%= r._id %>/edit" class="edit-button">EDIT</a></td>
         </tr>
         <% }); %>
     <% } else { %>
