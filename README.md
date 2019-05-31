@@ -11,7 +11,7 @@ https://roastlog.herokuapp.com/
 Instructions: Click Login to Google to Add roasts or reviews or just look at archived roasts logs. 
 
 *Next Steps:*
-Ice box items: Implement a chatbox widget where users can chat and share their home roast, possibly bring people together once a month.
+Ice box items: Implement a chatbox widget where users can chat and share their home roast, possibly bring people together once a month, all user to add seconds in addition to minutes for number inputs.
 
 *Screenshots of App:*
 ![Link](https://i.imgur.com/dRDpE8F.png)
