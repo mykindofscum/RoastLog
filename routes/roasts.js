@@ -2,7 +2,6 @@ const express = require('express');
 const router = express.Router();
 const roastsCtrl = require('../controllers/roasts');
 
-// TODO: Protect this route with isLoggedIn
 router.get('/', isLoggedIn, roastsCtrl.index);
 router.get('/new', roastsCtrl.new);
 router.get('/:id', roastsCtrl.show);

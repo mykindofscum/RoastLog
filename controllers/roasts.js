@@ -50,7 +50,6 @@ function create(req, res) {
 function delRoast(req, res) {
     Roast.findByIdAndRemove(req.params.id, (err) => {
         if (err) {
-            console.log(err);
             res.redirect('/roasts');    
         }
         res.redirect('/roasts');
@@ -65,7 +64,6 @@ function edit(req, res) {
 
 function update(req, res) {
     req.body.nowSharing = req.body.nowSharing === 'on';
-    
     Roast.findByIdAndUpdate(req.params.id, req.body, (err, roast) => {    
         if (err) {
             res.redirect('/roasts');

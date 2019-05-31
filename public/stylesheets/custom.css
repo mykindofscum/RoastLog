@@ -6,37 +6,9 @@ body {
     color: antiquewhite;
 }
 
-.details-button {
-    background-color: #b1b0b1;
-    border:1px solid #660000;
-    border-radius:10px;
-    color:white;
-    margin-right:10px;
-    padding:10px 10px 10px 10px;
-    /* height: 30px; */
-    width: 80px;
-}
-
-.add-button {
-    background-color:#e35681;
-    border:1px solid #660000;
-    border-radius:10px;
-    color:#fff;
-    margin-right:10px;
-    padding:10px 10px 10px 10px;
-}
-
-.delete-button {
-    background-color:#cc0000;
-    border:1px solid #660000;
-    border-radius:10px;
-    color:#fff;
-    margin-right:10px;
-    padding:10px 10px 10px 10px;
-    height: 43px;
-}
-
-.edit-button {
+.breadcrumb-item a {
+    color: black;
+    font-size: 18px;
     background-color:#6c313f;
     border:1px solid #660000;
     border-radius:10px;
@@ -45,9 +17,32 @@ body {
     padding:10px 10px 10px 10px;
 }
 
-/* a {
-    color: black;
-} */
+.button-style {
+    border-radius:10px;
+    color:#fff;
+    margin-right:10px;
+    padding:10px 10px 10px 10px;
+}
+
+#details-button {
+    background-color: #b1b0b1;
+    border:1px solid #660000;
+}
+
+#add-button {
+    background-color:#e35681;
+    border:1px solid #660000;
+}
+
+#delete-button {
+    background-color:#cc0000;
+    border:1px solid #660000;
+}
+
+#edit-button {
+    background-color:#6c313f;
+    border:1px solid #660000;
+}
 
 #roast-details, div {
     padding: 8px;
@@ -70,13 +65,3 @@ td, th {
     padding: 15px;
 }
 
-.breadcrumb-item a {
-    color: black;
-    font-size: 18px;
-    background-color:#6c313f;
-    border:1px solid #660000;
-    border-radius:10px;
-    color:#fff;
-    margin-right:10px;
-    padding:10px 10px 10px 10px;
-}

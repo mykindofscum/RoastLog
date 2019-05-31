@@ -11,7 +11,6 @@ function create(req, res) {
         roast.reviews.push(req.body);
         roast.save((err) => {
             if (err) {
-                console.log(err)
                 res.redirect(`/roasts/${roast._id}`);
             }
             res.redirect(`/roasts/${roast._id}`);
@@ -21,7 +20,6 @@ function create(req, res) {
 
 function show(req, res) {
     Review.findById(req.params.id, (err, roast) => {
-        console.log('req.params.id');
         if (err) return res.redirect(`/roasts/show`);
         res.render('roasts/show', {
             title: 'Roast Reviews', 

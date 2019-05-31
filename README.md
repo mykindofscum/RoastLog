@@ -14,8 +14,9 @@ Next Steps:
 Ice box items: Implement a chatbox widget where users can chat and share their home roast, possibly bring people together once a month.
 
 Screenshots of App:
-img src="public/images/Screen Shot 2019-05-30 at 9.15.25 PM.png"
 
-img src="public/images/Screen Shot 2019-05-30 at 9.14.59 PM.png"
+![LINK](https://i.imgur.com/dRDpE8F.png)
 
-img src="public/images/Screen Shot 2019-05-30 at 9.15.11 PM.png"
+![LINK](https://i.imgur.com/dRDpE8F.png)
+
+![LINK](https://i.imgur.com/nepQlc7.png)
